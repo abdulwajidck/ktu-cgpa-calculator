@@ -1,81 +1,25 @@
-const OS = 10;
-const Ap = 9;
-const A = 8.5;
-const Bp = 8;
-const B = 7;
-const C = 6;
-const P = 5;
-const F = 0;
-const FE = 0;
-const os = 10;
-const ap = 9;
-const a = 8.5;
-const bp = 8;
-const b = 7;
-const c = 6;
-const p = 5;
-const f = 0;
-const fe = 0;
-
-var cone = document.getElementById("credit-one");
-var gone = document.getElementById("grade-one");
-var ctwo = document.getElementById("credit-two");
-var gtwo = document.getElementById("grade-two");
-var cthree = document.getElementById("credit-three");
-var gthree = document.getElementById("grade-three");
-var cfour = document.getElementById("credit-four");
-var gfour = document.getElementById("grade-four");
-var cfive = document.getElementById("credit-five");
-var gfive = document.getElementById("grade-five");
-var csix = document.getElementById("credit-six");
-var gsix = document.getElementById("grade-six");
-//var cseven = document.getElementById("credit-seven");
-var gseven = document.getElementById("grade-seven");
-//var ceight = document.getElementById("credit-eight");
-var geight = document.getElementById("grade-eight");
+/* Coded by Abdul Wajid Ck @www.abdulwajidck.me.
+Don't copy without any written permission*/
 var cpa = document.getElementById("cgpa");
-
 function wajid() {
-    cone.addEventListener("input", wajid);
-    gone.addEventListener("input", wajid);
-    ctwo.addEventListener("input", wajid);
-    gtwo.addEventListener("input", wajid);
-    cthree.addEventListener("input", wajid);
-    gthree.addEventListener("input", wajid);
-    cfour.addEventListener("input", wajid);
-    gfour.addEventListener("input", wajid);
-    cfive.addEventListener("input", wajid);
-    gfive.addEventListener("input", wajid);
-    csix.addEventListener("input", wajid);
-    gsix.addEventListener("input", wajid);
-    //cseven.addEventListener("input", wajid);
-    gseven.addEventListener("input", wajid);
-    //ceight.addEventListener("input", wajid);
-    geight.addEventListener("input", wajid);
-    var ione = parseFloat(cone.value) || 0;
-    var itwo = parseFloat(ctwo.value) || 0;
-    var ithree = parseFloat(cthree.value) || 0;
-    var ifour = parseFloat(cfour.value) || 0;
-    var ifive = parseFloat(cfive.value) || 0;
-    var isix = parseFloat(csix.value) || 0;
-    //var iseven = parseFloat(cseven.value) || 0;
-    //var ieight = parseFloat(ceight.value) || 0;
-    //var itwo = document.getElementById("grade-one").value;
-    //var itwo = gone.value;
-    //var keepi = checker(itwo);
-    var result = (ione*OS+itwo*A+ithree*Ap+ifour+ifive+isix+1+1)/(ione+itwo+ithree+ifour+ifive+isix+1+1);
+    var ione = parseInt(document.getElementById("credit-one").value);
+    var vone = parseInt(document.getElementById("grade-one").value);
+    var itwo = parseInt(document.getElementById("credit-two").value);
+    var vtwo = parseInt(document.getElementById("grade-two").value);
+    var ithree = parseInt(document.getElementById("credit-three").value);
+    var vthree = parseInt(document.getElementById("grade-three").value);
+    var ifour = parseInt(document.getElementById("credit-four").value);
+    var vfour = parseInt(document.getElementById("grade-four").value);
+    var ifive = parseInt(document.getElementById("credit-five").value);
+    var vfive = parseInt(document.getElementById("grade-five").value);
+    var isix = parseInt(document.getElementById("credit-six").value);
+    var vsix = parseInt(document.getElementById("grade-six").value);
+    var iseven = parseInt(document.getElementById("credit-seven").value);
+    var vseven = parseInt(document.getElementById("grade-seven").value);
+    var ieight = parseInt(document.getElementById("credit-eight").value);
+    var veight = parseInt(document.getElementById("grade-eight").value);
+    var deno = ione + itwo + ithree + ifour + ifive + isix + iseven + ieight;
+    var nume = ione*vone+itwo*vtwo+ithree*vthree+ifour*vfour+ifive*vfive+isix*vsix+iseven*vseven+ieight*veight;
+    var result = nume/deno; 
     cpa.innerHTML = "Your CGPA is"+result;
 }
-
-/*function checker(itwo){
-    if (itwo == "OS" || "os"){
-        return 10;
-    }else if (itwo == "Ap" || itwo=="ap"){
-        return 9;
-    } else { 
-        return 0;
-    }
-
-}
-*/
-alert("Me");
